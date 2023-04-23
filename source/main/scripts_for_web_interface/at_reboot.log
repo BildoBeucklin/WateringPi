@@ -1,0 +1,8 @@
+PHP Warning:  mysqli::__construct(): (HY000/2002): No such file or directory in /var/www/html/get_adc_values.php on line 22
+Connection failed: No such file or directorydone
+done
+done
+done
+done
+done
+done

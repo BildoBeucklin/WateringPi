@@ -1,0 +1,42 @@
+
+Step 1: Install Apache2
+
+To install Apache2 on a Raspberry Pi, first open up the terminal window and enter the following command: 
+
+sudo apt-get install apache2 php7.4 php7.4-mysqli php7.4-mbstring
+
+Step 2: Copy the HTML file
+
+Next, copy the HTML file containing the code for the Raspberry Pi project into the “/var/www/html” directory. This is the directory where Apache2 will be serving the web page from.
+
+Step 3: Configure Apache2
+
+Next, open up the Apache2 configuration file with the command:
+
+sudo nano /etc/apache2/apache2.conf
+
+In the configuration file, add the following line at the end:
+
+<Directory /var/www/html> 
+  AllowOverride All
+</Directory>
+
+Save the configuration file and restart Apache2 with the following command:
+
+sudo service apache2 restart
+
+Step 4: Create Scripts
+
+Step 5: Test
+
+Finally, open up a web browser and navigate to the IP address of the Raspberry Pi. You should see the web page with the buttons and the slider. Test that the buttons and the slider are working as expected.
+Access the website: http://localhost/index.html
+
+Setp 6: Get ADC Values about USB
+
+Setup usb port
+sudo stty -F /dev/ttyACM0 cs8 38400 ignbrk -brkint -imaxbel -opost -onlcr -isig -icanon -iexten -echo -echoe -echok -echoctl -echoke noflsh -ixon -crtscts
+
+Step 7 : 
+sudo chmod 777 /dev/ttyACM0 
+

@@ -1,0 +1,10 @@
+sudo apt install postfix
+
+
+sudo crontab -e
+                                                    
+SHELL=/bin/bash
+MAILTO=""
+* * * * * (/usr/bin/php -f /var/www/html/get_adc_values.php) >> /var/www/html/get_values.log 2>&1
+10 * * * * (/usr/bin/php -f /var/www/html/make_picture.php) >> /var/www/html/take_photos.log 2>&1
+
