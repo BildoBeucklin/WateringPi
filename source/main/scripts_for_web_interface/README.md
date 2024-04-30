@@ -30,7 +30,15 @@ Save the configuration file and restart Apache2 with the following command:
 ```bash
 sudo service apache2 restart
 ```
- 
+Finally, open up a web browser and navigate to the IP address of the Raspberry Pi. You should see the web page with the buttons and the slider. Test that the buttons and the slider are working as expected.
+
+Access the website: http://localhost/index.html
+
+### Get ADC Values about USB
+```bash
+sudo stty -F /dev/ttyACM0 cs8 38400 ignbrk -brkint -imaxbel -opost -onlcr -isig -icanon -iexten -echo -echoe -echok -echoctl -echoke noflsh -ixon -crtscts
+sudo chmod 777 /dev/ttyACM0
+```
 
 ## Step 2 Set Up database
 
